@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'KosefontP-JP';
+    src: url('fonts/KosefontP-JP.ttf');
+}
+
+body {
+    font-family: 'KosefontP-JP', 'Segoe UI Emoji', sans-serif;
+    /* 使用 SVG 作为背景 */
+    background: url('background.svg') no-repeat center center fixed; 
+    background-size: cover;
+    color:#ff9b6a;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px; /* 增大宽度，让日历框更大 */
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px; /* 增加内边距，让日历框更可爱 */
+    border-radius: 50px; /* 进一步增大圆角，让日历框更可爱 */
+    box-shadow: 0 0 30px rgba(0, 150, 136, 0.5); /* 加大阴影，更突出 */
+    border: 8px solid #ff9b6a; /* 增加边框宽度，让日历框更突出 */
+}
+
+h1 {
+    font-size: 48px; /* 增大标题字体大小 */
+    margin-bottom: 20px;
+    color: #b8d38f; /* 更改标题颜色，使其更醒目 */
+}
+
+.dates {
+    text-align: center; /* 改为居中对齐 */
+    margin-bottom: 20px;
+    overflow: hidden; /* 隐藏溢出部分，用于动画效果 */
+}
+
+.dates ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* 使用 flex 布局 */
+    justify-content: center; /* 水平居中 */
+    animation: flashIn 1s ease-out forwards; /* 添加动画效果 */
+}
+
+/* 定义动画 */
+@keyframes flashIn {
+    0% {
+        transform: translateY(-100%); /* 从上方开始 */
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0); /* 定格铺开 */
+    }
+}
+
+.dates li {
+    font-size: 16px; /* 缩小日期字体大小 */
+    margin: 0 10px; /* 调整间距 */
+    display: flex;
+    flex-direction: row; /* 使日期数字在一行显示 */
+}
+
+.dates li::after {
+    content: ""; /* 去掉日期后面的冒号 */
+}
+
+#reminders {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #004d40;
+}
+
+button {
+    background-color: #CEEAE8;
+    font-family: 'KosefontP-JP', cursive, sans-serif;
+    color: #E68364;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #009a7f;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff9b6a;
+    font-family: 'KosefontP-JP', sans-serif;
+    background: linear-gradient(90deg, #ddff95, #ff9b6a, #fd803a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer img {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 可爱闪动元素的样式 */
+.wrapper::before,
+.wrapper::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #FFC0CB; /* 粉色 */
+  border-radius: 50%;
+  margin: 0 10px;
+  animation: blink 1s infinite;
+}
+
+/* 定义闪烁动画 */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
