@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: 'KosefontP-JP', 'Segoe UI Emoji', sans-serif;
+    font-family: 'KosefontP-JP', sans-serif;
     /* 使用 SVG 作为背景 */
     background: url('background.svg') no-repeat center center fixed; 
     background-size: cover;
