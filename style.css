@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'KosefontP-JP';
-    src: url('fonts/fonts/KosefontP-JP.ttf')format('truetype');
+    src: url('fonts/fonts/KosefontP-JP.ttf');
 }
 
 body {
-    font-family: 'KosefontP-JP';
+    font-family: 'KosefontP-JP', sans-serif;
     /* 使用 SVG 作为背景 */
-    background: url('background.svg') no-repeat center center fixed; 
+    background: url('background.svg') no-repeat center center fixed;
     background-size: cover;
-    color:#ff9b6a;
+    color: #ff9b6a;
     text-align: center;
     padding: 20px;
 }
@@ -107,33 +107,70 @@ button:hover {
 }
 
 .wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 可爱闪动元素的样式 */
 .wrapper::before,
 .wrapper::after {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #FFC0CB; /* 粉色 */
-  border-radius: 50%;
-  margin: 0 10px;
-  animation: blink 1s infinite;
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #FFC0CB; /* 粉色 */
+    border-radius: 50%;
+    margin: 0 10px;
+    animation: blink 1s infinite;
 }
 
 /* 定义闪烁动画 */
 @keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 媒体查询：适配小屏幕设备（如 iPhone 12 Pro） */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .dates li {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    #reminders {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .footer {
+        font-size: 16px;
+    }
+}
+
+/* 媒体查询：适配大屏幕设备（如 HUAWEI Pura 70） */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
 }
