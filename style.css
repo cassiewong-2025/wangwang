@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'KosefontP-JP';
-    src: url('fonts/fonts/KosefontP-JP.ttf');
+font-family: 'KosefontP-JP';
+src: url('fonts/fonts/KosefontP-JP.woff2') format('woff2'),
+url('fonts/fonts/KosefontP-JP.woff') format('woff'),
+url('fonts/fonts/KosefontP-JP.ttf') format('truetype');
 }
 
 body {
