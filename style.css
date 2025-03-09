@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'KosefontP-JP';
-    src: url('fonts/fonts/KosefontP-JP.ttf');
+    src: url('fonts/fonts/KosefontP-JP.ttf')format('truetype');
 }
 
 body {
-    font-family: 'KosefontP-JP', sans-serif;
+    font-family: 'KosefontP-JP';
     /* 使用 SVG 作为背景 */
     background: url('background.svg') no-repeat center center fixed; 
     background-size: cover;
